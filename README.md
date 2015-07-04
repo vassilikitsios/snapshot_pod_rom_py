@@ -21,26 +21,43 @@ Kitsios, V., 2010, Recovery of fluid mechanical modes in unsteady separated flow
 Each of the following directories contain a results directory (results), a directory containing the python source (src), and an images directory (images) with a gnuplot script.
 
 1modes:
+
 	Contains the temporal and spatial proper orthogonal decomposition (POD) modes and their eigenvalues.
+
 	The temporal correlation between an temporal POD mode and itself is the variance (the eigenvalue), and between any other mode the temporal correlation is 0 - see equation 5.5 of Kitsios (2010).
+
 	The inner product between a spatial POD modes and itself is 1, and between any other mode the inner product is 0 - see equation 5.7 of Kitsios (2010). 
+
 	Calculation of POD modes is now a standard process. Determining these modes is not included in the present examples as this would require the individual snapshots to also be provided, which is not practical.
 
+
 2rom_coefficients.no_calibration:
+
 	The coefficients required to run a POD ROM are calculated from the spatial POD modes, the spatial mean field, and their spatial derivatives. Here no calibration is used.
 
+
 3rom.no_calibration:
+
 	A POD ROM is run with no calibration.
+
 	The images directory compares the POD ROM temporal integration results to the temporal POD modes.
 
+
 4rom_coefficients.constant_linear_calibration:
+
 	The coefficients required to run a POD ROM are calculated from the spatial POD modes, the spatial mean field, and their spatial derivatives.
+
 	Here the constant and linear coefficients have been calibrated using additional information from the temporal modes.
+
 	Note the soursce is identical to "2rom_coefficients.no_calibration", it is only the input parameters that have changed.
 
+
 5rom.constant_linear_calibration:
+
 	A POD ROM is run with calibration of the constant and linear coefficients. The images directory compares the POD ROM temporal integration results to the temporal POD modes.
+
 	Note the source is identical to that in "3rom.no_calibration", it is only the input parameters that have changed.
+
 	Notice the improvement in agreement within the snapshot period, and improved stability after the snapshot period.
 
 -----------------------------------------------------------------------
