@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf results
+python ../../src/integrate_rom/integrate_rom.py

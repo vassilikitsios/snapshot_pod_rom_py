@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf results
+python ../../src/calculate_rom_coefficients/calculate_rom_coefficients.py

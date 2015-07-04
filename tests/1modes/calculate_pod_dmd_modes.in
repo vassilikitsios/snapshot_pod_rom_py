@@ -1,0 +1,81 @@
+#-----------------------------------------------------------------------
+# calculate_POD_DMD_modes.in
+#     input deck for code calculate_POD_DMD_modes.py 
+#
+#-----------------------------------------------------------------------
+# problem specification
+#
+# directory with snapshots and file with list of snapshots
+snapshot_dir = /media/PhDThesis/data/airfoil_numerical_Kitsios/Re00300_C658_N080_Z001_c100/6instantaneous_fields/
+#
+# list of snapshots filename
+snapshot_list_file_name = C1_dN0010.list
+#
+# timestep between snapshots
+dt = 0.004
+#
+# name of velocity field in files
+var_name = u
+#
+# flag to subtract mean from snapshots prior to undertaking POD
+subtract_mean = true
+#subtract_mean = false
+#
+# flag to correct for cell volumes
+#correct_for_cell_volumes = true
+correct_for_cell_volumes = false
+#
+# file with cell volume information
+cell_volume_file_name = cell_volumes.vtk
+#
+# number of velocity vector components 
+#num_components = 1
+num_components = 2
+#num_components = 3
+#
+# extract points from snapshots within these domain limits
+x_min = 1.5
+x_max = -13.0
+y_min = 4.5
+y_max = -4.5
+z_min = 1.0
+z_max = -1.0
+#
+# number of POD modes used in the calculation of the DMD modes
+# if num_mods_trunc < 0 then all valid modes are used
+num_modes_trunc = -1
+# condition number tolerance
+tol_CN = 1.0e-15
+# POD orthogonality tolerance
+tol_ortho = 1.0e-15
+#
+# number of spatial modes to write to file
+# if num_mods_to_write < 0 then all modes are written
+num_modes_to_write = 10
+#
+# flag to write POD correlation matrix and/or DMD linear operator matrices to file
+#write_matrices = POD
+#write_matrices = DMD
+write_matrices = both
+#write_matrices = none
+#
+# flag to restart from previous correlation matrix
+#restart_flag = true
+restart_flag = false
+restart_dir = ./restart
+#
+# flat to test orthogonality of the POD modes
+test_POD_orthogonality = true
+#test_POD_orthogonality = false
+#
+# flat to test bi-orthogonality of the DMD direct and adjoint modes
+test_DMD_biorthogonality = true
+#test_DMD_biorthogonality = false
+#
+# flag to test orthogonality of the stochastic modes
+test_stochastic_mode_orthogonality = true
+#test_stochastic_mode_orthogonality = false
+#
+#-----------------------------------------------------------------------
+# EOF
+#-----------------------------------------------------------------------

@@ -1,0 +1,44 @@
+#-----------------------------------------------------------------------
+# calculate_POD_DMD_modes.in
+#     input deck for code calculate_POD_DMD_modes.py 
+#
+#-----------------------------------------------------------------------
+# problem specification
+#
+# Reynolds number = (nondimensionalised kinematic viscosity)^(-1)
+Re = 300
+#
+# number of modes
+num_modes = 6
+#
+# flag to correct for cell volumes
+#correct_for_cell_volumes = true
+correct_for_cell_volumes = false
+#
+# number of velocity vector components 
+#num_components = 1
+num_components = 2
+#num_components = 3
+#
+# number of spatial dimensions
+#num_dimensions = 1
+num_dimensions = 2
+#num_dimensions = 3
+#
+# flag to calibrate coefficients
+calibrate_coefficients = none
+#calibrate_coefficients = constant
+#calibrate_coefficients = constant_and_linear
+#
+# interpolate and increase temporal resolution of temporal modes by this factor for calibration
+interp_factor = 10
+#
+# number of snapshots - must be same as the number of time instances in the POD temporal modes in "pod_mode_dir"
+num_snapshots = 513
+#
+# directory of POD modes
+pod_mode_dir = ../1modes/results
+#
+#-----------------------------------------------------------------------
+# EOF
+#-----------------------------------------------------------------------

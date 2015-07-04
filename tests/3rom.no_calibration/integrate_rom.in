@@ -1,0 +1,28 @@
+#-----------------------------------------------------------------------
+# integrate_rom.in
+#     input deck for code integrate_rom.py 
+#
+#-----------------------------------------------------------------------
+# problem specification
+#
+# timestep for temporal integration
+#	if not calibrated, must be the same as the dt in the temporal POD modes in "pod_mode_dir".
+#	if calibrated, must be the same as the dt in the interpolated temporal POD modes in "rom_coefficient_dir".
+dt = 4.0e-3
+#
+# number of timesteps for temporal integration
+num_timesteps = 1026
+#
+# number of modes used in the reduced order model
+#	if calibrated, must be the same as the number of modes specified in "calculate_rom_coefficients.in"
+num_modes = 6
+#
+# directory of POD modes
+pod_mode_dir = ../1modes/results
+#
+# directory of ROM coefficients
+rom_coefficient_dir = ../2rom_coefficients.no_calibration/results
+#
+#-----------------------------------------------------------------------
+# EOF
+#-----------------------------------------------------------------------

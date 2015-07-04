@@ -1,0 +1,27 @@
+#-----------------------------------------------------------------------
+# run_ROM.in
+#     input deck for code integrate_rom.py 
+#
+#-----------------------------------------------------------------------
+# problem specification
+#
+# timestep for temporal integration
+dt = 3.8e-3
+#
+# number of timesteps for temporal integration
+#num_timesteps = 10
+num_timesteps = 1240
+#num_timesteps = 25000
+#
+# number of modes used in the reduced order model
+num_modes = 10
+#
+# directory of POD modes
+pod_mode_dir = ../1modes/results
+#
+# directory of ROM coefficients
+rom_coefficient_dir = ../2rom_coefficients/results
+#
+#-----------------------------------------------------------------------
+# EOF
+#-----------------------------------------------------------------------

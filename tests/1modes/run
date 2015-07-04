@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf results
+python ../../src/calculate_pod_dmd_modes/calculate_pod_dmd_modes.py
